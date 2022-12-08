@@ -11,10 +11,10 @@
 <br>
 
 ## 📱 Tela Principal e Funcionalidades Parte 1
-<img src="https://user-images.githubusercontent.com/63603061/200569830-fc7d6d24-c1e0-4136-b27e-1a2a4e30766c.png"
+<img src=""
  width=50%>
 ## 📱 Funcionalidades Parte 2
-<img src="https://user-images.githubusercontent.com/63603061/200570374-0cb14f51-96f4-4701-96ff-8ff2b1b77b77.png"
+<img src=""
  width=50%>
 
 ## 💻 Projeto
