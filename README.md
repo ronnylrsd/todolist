@@ -37,7 +37,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 ## 👷 COLABORADOR
 
 #### Nome: Ronny Lima Ribeiro da Silva
-- Registro do Aluno (RA): 00000009775
+- LinkedIn: [Ronny Ribeiro](https://www.linkedin.com/in/ronny-lima-ribeiro-da-silva/)
 - GitHub: [ronnylrsd](https://github.com/ronnylrsd)
 
 
