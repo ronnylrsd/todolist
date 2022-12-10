@@ -10,7 +10,10 @@
 
 <br>
 
-## 📱 Tela Principal e Funcionalidades Parte 1
+## 📱 Tela Principal
+<img src=""
+ width=50%>
+ ## 📱 Funcionalidades Parte 1
 <img src=""
  width=50%>
 ## 📱 Funcionalidades Parte 2
