@@ -22,7 +22,7 @@
 
 ## 💻 Projeto
 
-Projeto para entender os fundamentos do React-Native realizado no Curso de React da RocketSeat
+Projeto desafio para aplicar os fundamentos do React-Native realizado no Curso de React da RocketSeat e buscar algumas funcionalidades individualmente.
 
 ## ✨ Tecnologias
 
