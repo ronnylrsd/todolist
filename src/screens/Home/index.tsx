@@ -1,4 +1,4 @@
-import { View, Text, Image } from "react-native";
+import { View, Text, Image, TextInput, TouchableOpacity } from "react-native";
 import { styles } from "./styles";
 
 export function Home() {
@@ -10,7 +10,15 @@ export function Home() {
         <Text style={styles.logoDo}>do</Text>
       </View>
       <View style={styles.container}>
-        <Text style={styles.title}>Welcome, Gabriel</Text>
+      <View style={styles.form}>
+        <TextInput 
+        style={styles.input} placeholder="Adicione uma nova tarefa" placeholderTextColor="#808080" //GRAY300 
+        />
+        <TouchableOpacity style={styles.button}>
+          <Text style={styles.buttonText}><Image style={styles.logoImage} source={require("../../assets/addButtonSign.png")} /></Text>
+        </TouchableOpacity>
+      </View>
+        
       </View>
     </>
   );
