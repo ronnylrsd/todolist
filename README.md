@@ -23,7 +23,6 @@
 ## 💻 Projeto
 
 Projeto desafio para aplicar os fundamentos do React-Native realizado no Curso de React da RocketSeat e buscar algumas funcionalidades individualmente. Nesse desafio, você vai desenvolver uma aplicação de controle de tarefas no estilo **to-do list**, que contém as seguintes funcionalidades:
-
 - Adicionar uma nova tarefa
 - Marcar e desmarcar uma tarefa como concluída
 - Remover uma tarefa da listagem
