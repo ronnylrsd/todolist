@@ -3,8 +3,8 @@ export default {
         //PRODUCT
         PURPLE: '#8284FA',
         DARK_PURPLE: '#5E60CE',
-        BLUE: '4EA8DE',
-        DARK_BLU: '1E6F9F',
+        BLUE: '#4EA8DE',
+        DARK_BLU: '#1E6F9F',
 
         //BASE
         GRAY_700: '#0D0D0D',

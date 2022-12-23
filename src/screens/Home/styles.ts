@@ -64,4 +64,36 @@ export const styles = StyleSheet.create({
     marginRight: 24,
     marginLeft: 24,
   },
+  createdConcludedTasks: {
+    flexDirection: "row",
+    marginTop: 24,
+    marginLeft: 24,
+  },
+  createdTasksText: {
+    color: '#4EA8DE', //BLUE
+    fontSize: 16,
+    fontWeight: "bold",
+    marginRight: 12,
+  },
+  createdTasksNumber: {
+    color: '#D9D9D9', //GRAY_200
+    fontSize: 16,
+    fontWeight: "bold",
+    backgroundColor: '#333333', //GRAY_400
+    borderRadius: 5,
+  },
+  concludedTasksText: {
+    marginLeft: 74,
+    color: '#8284FA', //PURPLE
+    fontSize: 16,
+    fontWeight: "bold",
+    marginRight: 12,
+  },
+  concludedTasksNumber: {
+    color: '#D9D9D9', //GRAY_200
+    fontSize: 16,
+    fontWeight: "bold",
+    backgroundColor: '#333333', //GRAY_400
+    borderRadius: 5,
+  },
 });
