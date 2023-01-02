@@ -34,7 +34,7 @@ export const styles = StyleSheet.create({
   },
   container: {
     flex: 0.8,
-    backgroundColor: "#333333", //GRAY_400
+    backgroundColor: "#262626", //GRAY_500
   },
   input: {
     flex: 1,
@@ -73,7 +73,7 @@ export const styles = StyleSheet.create({
     color: '#4EA8DE', //BLUE
     fontSize: 16,
     fontWeight: "bold",
-    marginRight: 12,
+    marginRight: 8,
   },
   createdTasksNumber: {
     color: '#D9D9D9', //GRAY_200
@@ -81,19 +81,25 @@ export const styles = StyleSheet.create({
     fontWeight: "bold",
     backgroundColor: '#333333', //GRAY_400
     borderRadius: 5,
+    paddingHorizontal: 8,
+    paddingVertical: 2,
   },
   concludedTasksText: {
-    marginLeft: 74,
+    marginLeft: 51,
     color: '#8284FA', //PURPLE
     fontSize: 16,
     fontWeight: "bold",
-    marginRight: 12,
+    marginRight: 8,
   },
   concludedTasksNumber: {
     color: '#D9D9D9', //GRAY_200
     fontSize: 16,
     fontWeight: "bold",
     backgroundColor: '#333333', //GRAY_400
+    justifyContent: "center",
+    alignItems: "center",
     borderRadius: 5,
+    paddingHorizontal: 8,
+    paddingVertical: 2,
   },
 });

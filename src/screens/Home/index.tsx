@@ -29,7 +29,7 @@ export function Home() {
           </TouchableOpacity>
         </View>
         <View style={styles.createdConcludedTasks}>
-          <Text style={styles.createdTasksText}>Tarefas criadas</Text> 
+          <Text style={styles.createdTasksText}>Tarefas criadas</Text>
           <Text style={styles.createdTasksNumber}>0</Text>
           <Text style={styles.concludedTasksText}>Tarefas concluídas</Text>
           <Text style={styles.concludedTasksNumber}>0</Text>
