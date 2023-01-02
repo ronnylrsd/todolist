@@ -1,7 +1,26 @@
-import { View, Text, Image, TextInput, TouchableOpacity } from "react-native";
+import { useState } from "react";
+import { View, Text, Image, TextInput, TouchableOpacity, FlatList, Alert } from "react-native";
 import { styles } from "./styles";
 
 export function Home() {
+  const [tasks, setTasks] = useState<string[]>([]);
+  const [taskName, setTaskName] = useState<string>("");
+
+  function handleAddNewTask() {
+    if(tasks.includes(taskName)) {
+      return Alert.alert(
+      "Tarefa já cadastrada",
+      "Você não pode cadastrar uma tarefa com o mesmo nome");
+    }
+    setTasks((prevState) => [...prevState, taskName]);
+    setTaskName("");
+
+  }
+
+  function handleCheckTask(name: string){
+    
+  }
+
   return (
     <>
       <View style={styles.header}>
@@ -34,6 +53,27 @@ export function Home() {
           <Text style={styles.concludedTasksText}>Tarefas concluídas</Text>
           <Text style={styles.concludedTasksNumber}>0</Text>
         </View>
+        <FlatList
+        data={tasks}
+        keyExtractor={item => item.id}
+        renderItem={({ item }) => (
+          <Task
+            key={item}
+            name={item}
+            />
+        )}
+        showsVerticalScrollIndicator={false}
+        ListEmptyComponent={() => (
+          <View style={styles.emptyTasks}>
+            <Image
+                style={styles.clipboardImage}
+                source={require("../../assets/clipboard.png")}
+              />
+            <Text style={styles.emptyTasksTitle}>Você ainda não tem tarefas cadastradas</Text>
+            <Text style={styles.emptyTasksText}>Crie tarefas e organize seus itens a fazer</Text>
+          </View>
+        )}
+        />
       </View>
     </>
   );
