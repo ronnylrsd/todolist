@@ -14,7 +14,9 @@ import { styles } from "./styles";
 export function Home() {
   const [tasks, setTasks] = useState<string[]>([]);
   const [taskName, setTaskName] = useState<string>("");
-  let tasksNumber = 0;
+  const [tasksCount, setTasksCount] = useState(0);
+  const onPressAdd = () => setTasksCount(tasksCount + 1);
+  const onPressRemove = () => setTasksCount(tasksCount - 1);
 
   function handleAddNewTask() {
     if (tasks.includes(taskName)) {
@@ -25,10 +27,10 @@ export function Home() {
     }
     setTasks((prevState) => [...prevState, taskName]);
     setTaskName("");
-    tasksNumber = tasksNumber + 1;
+    onPressAdd();
   }
 
-  function handleCheckedTask(name: string) {}
+  function handleConcluedTask(name: string) {}
 
   function handleParticipantRemove(name: string) {
     Alert.alert("Remover", `Remover a tarefa ${name}?`, [
@@ -73,7 +75,7 @@ export function Home() {
         </View>
         <View style={styles.createdConcludedTasks}>
           <Text style={styles.createdTasksText}>Tarefas criadas</Text>
-          <Text style={styles.createdTasksNumber}>{tasksNumber}</Text>
+          <Text style={styles.createdTasksNumber}>{tasksCount}</Text>
           <Text style={styles.concludedTasksText}>Tarefas concluídas</Text>
           <Text style={styles.concludedTasksNumber}>0</Text>
         </View>
@@ -83,7 +85,7 @@ export function Home() {
             <Task
               key={item}
               name={item}
-              onChecked={() => handleCheckedTask(item)}
+              onConclued={() => handleConcluedTask(item)}
               onRemove={() => handleParticipantRemove(item)}
             />
           )}
