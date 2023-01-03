@@ -30,13 +30,17 @@ export function Home() {
     onPressAdd();
   }
 
+  function handleRemoveTask(name: string) {
+    setTasks((prevState) => prevState.filter((task) => task !== name));
+    onPressRemove();
+  }
   function handleConcluedTask(name: string) {}
 
-  function handleParticipantRemove(name: string) {
+  function handleRemoveSelectedTask(name: string) {
     Alert.alert("Remover", `Remover a tarefa ${name}?`, [
       {
         text: "Sim",
-        onPress: () => setTasks(prevState => prevState.filter(task => task !== name)),
+        onPress: () => handleRemoveTask(name),
       },
       {
         text: "Não",
@@ -86,7 +90,7 @@ export function Home() {
               key={item}
               name={item}
               onConclued={() => handleConcluedTask(item)}
-              onRemove={() => handleParticipantRemove(item)}
+              onRemove={() => handleRemoveSelectedTask(item)}
             />
           )}
           showsVerticalScrollIndicator={false}
