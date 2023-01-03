@@ -34,7 +34,7 @@ export const styles = StyleSheet.create({
   },
   container: {
     flex: 0.8,
-    backgroundColor: "#262626", //GRAY_500
+    backgroundColor: "#1A1A1A", //GRAY_600
   },
   input: {
     flex: 1,
@@ -70,36 +70,68 @@ export const styles = StyleSheet.create({
     marginLeft: 24,
   },
   createdTasksText: {
-    color: '#4EA8DE', //BLUE
+    color: "#4EA8DE", //BLUE
     fontSize: 16,
     fontWeight: "bold",
     marginRight: 8,
   },
   createdTasksNumber: {
-    color: '#D9D9D9', //GRAY_200
+    color: "#D9D9D9", //GRAY_200
     fontSize: 16,
     fontWeight: "bold",
-    backgroundColor: '#333333', //GRAY_400
+    backgroundColor: "#333333", //GRAY_400
     borderRadius: 5,
     paddingHorizontal: 8,
     paddingVertical: 2,
   },
   concludedTasksText: {
     marginLeft: 51,
-    color: '#8284FA', //PURPLE
+    color: "#8284FA", //PURPLE
     fontSize: 16,
     fontWeight: "bold",
     marginRight: 8,
   },
   concludedTasksNumber: {
-    color: '#D9D9D9', //GRAY_200
+    color: "#D9D9D9", //GRAY_200
     fontSize: 16,
     fontWeight: "bold",
-    backgroundColor: '#333333', //GRAY_400
+    backgroundColor: "#333333", //GRAY_400
     justifyContent: "center",
     alignItems: "center",
     borderRadius: 5,
     paddingHorizontal: 8,
     paddingVertical: 2,
+  },
+  emptyTasks: {
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+    top: 32,
+    paddingHorizontal: 24,
+    height: 208,
+    borderTopWidth: 1,
+    borderTopColor: "#333333", //GRAY_400
+    width: 327,
+    marginHorizontal: 48,
+  },
+  clipboardImage: {
+    width: 56,
+    height: 56,
+    marginBottom: 16,
+  },
+  emptyTasksTitle: {
+    //fontFamily: "Inter",
+    fontStyle: "normal",
+    fontSize: 14,
+    fontWeight: "bold",
+    lineHeight: 20,
+    textAlign: "center",
+    color: "#808080", //GRAY_300
+  },
+  emptyTasksText: {
+    color: "#808080", //GRAY_300
+    fontSize: 14,
+    lineHeight: 20,
+    textAlign: "center",
   },
 });

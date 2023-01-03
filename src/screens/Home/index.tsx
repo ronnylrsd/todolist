@@ -1,5 +1,14 @@
-import { useState } from "react";
-import { View, Text, Image, TextInput, TouchableOpacity, FlatList, Alert } from "react-native";
+import React, { useState } from "react";
+import {
+  View,
+  Text,
+  Image,
+  TextInput,
+  TouchableOpacity,
+  FlatList,
+  Alert,
+} from "react-native";
+import { Task } from "../../components/Task";
 import { styles } from "./styles";
 
 export function Home() {
@@ -7,19 +16,17 @@ export function Home() {
   const [taskName, setTaskName] = useState<string>("");
 
   function handleAddNewTask() {
-    if(tasks.includes(taskName)) {
+    if (tasks.includes(taskName)) {
       return Alert.alert(
-      "Tarefa já cadastrada",
-      "Você não pode cadastrar uma tarefa com o mesmo nome");
+        "Tarefa já cadastrada",
+        "Você não pode cadastrar uma tarefa com o mesmo nome"
+      );
     }
     setTasks((prevState) => [...prevState, taskName]);
     setTaskName("");
-
   }
 
-  function handleCheckTask(name: string){
-    
-  }
+  function handleCheckedTask(name: string) {}
 
   return (
     <>
@@ -38,7 +45,7 @@ export function Home() {
             placeholder="Adicione uma nova tarefa"
             placeholderTextColor="#808080" //GRAY300
           />
-          <TouchableOpacity style={styles.button}>
+          <TouchableOpacity style={styles.button} onPress={handleAddNewTask}>
             <Text style={styles.buttonText}>
               <Image
                 style={styles.logoImage}
@@ -54,25 +61,29 @@ export function Home() {
           <Text style={styles.concludedTasksNumber}>0</Text>
         </View>
         <FlatList
-        data={tasks}
-        keyExtractor={item => item.id}
-        renderItem={({ item }) => (
-          <Task
-            key={item}
-            name={item}
+          data={tasks}
+          renderItem={({ item }) => (
+            <Task
+              key={item}
+              name={item}
+              onChecked={() => handleCheckedTask(item)}
             />
-        )}
-        showsVerticalScrollIndicator={false}
-        ListEmptyComponent={() => (
-          <View style={styles.emptyTasks}>
-            <Image
+          )}
+          showsVerticalScrollIndicator={false}
+          ListEmptyComponent={() => (
+            <View style={styles.emptyTasks}>
+              <Image
                 style={styles.clipboardImage}
                 source={require("../../assets/clipboard.png")}
               />
-            <Text style={styles.emptyTasksTitle}>Você ainda não tem tarefas cadastradas</Text>
-            <Text style={styles.emptyTasksText}>Crie tarefas e organize seus itens a fazer</Text>
-          </View>
-        )}
+              <Text style={styles.emptyTasksTitle}>
+                Você ainda não tem tarefas cadastradas
+              </Text>
+              <Text style={styles.emptyTasksText}>
+                Crie tarefas e organize seus itens a fazer
+              </Text>
+            </View>
+          )}
         />
       </View>
     </>
