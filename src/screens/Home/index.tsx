@@ -14,6 +14,7 @@ import { styles } from "./styles";
 export function Home() {
   const [tasks, setTasks] = useState<string[]>([]);
   const [taskName, setTaskName] = useState<string>("");
+  let tasksNumber = 0;
 
   function handleAddNewTask() {
     if (tasks.includes(taskName)) {
@@ -24,9 +25,23 @@ export function Home() {
     }
     setTasks((prevState) => [...prevState, taskName]);
     setTaskName("");
+    tasksNumber = tasksNumber + 1;
   }
 
   function handleCheckedTask(name: string) {}
+
+  function handleParticipantRemove(name: string) {
+    Alert.alert("Remover", `Remover a tarefa ${name}?`, [
+      {
+        text: "Sim",
+        onPress: () => setTasks(prevState => prevState.filter(task => task !== name)),
+      },
+      {
+        text: "Não",
+        style: "cancel",
+      },
+    ]);
+  }
 
   return (
     <>
@@ -44,6 +59,8 @@ export function Home() {
             style={styles.input}
             placeholder="Adicione uma nova tarefa"
             placeholderTextColor="#808080" //GRAY300
+            onChangeText={setTaskName}
+            value={taskName}
           />
           <TouchableOpacity style={styles.button} onPress={handleAddNewTask}>
             <Text style={styles.buttonText}>
@@ -56,7 +73,7 @@ export function Home() {
         </View>
         <View style={styles.createdConcludedTasks}>
           <Text style={styles.createdTasksText}>Tarefas criadas</Text>
-          <Text style={styles.createdTasksNumber}>0</Text>
+          <Text style={styles.createdTasksNumber}>{tasksNumber}</Text>
           <Text style={styles.concludedTasksText}>Tarefas concluídas</Text>
           <Text style={styles.concludedTasksNumber}>0</Text>
         </View>
@@ -67,6 +84,7 @@ export function Home() {
               key={item}
               name={item}
               onChecked={() => handleCheckedTask(item)}
+              onRemove={() => handleParticipantRemove(item)}
             />
           )}
           showsVerticalScrollIndicator={false}
