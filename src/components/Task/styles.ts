@@ -15,6 +15,7 @@ export const styles = StyleSheet.create({
     borderRadius: 8,
   },
   name: {
+    flex: 1,
     fontSize: 14,
     paddingVertical: 12,
     paddingRight: 48,
@@ -38,8 +39,8 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     borderRadius: 4,
-    paddingLeft: 220,
     paddingVertical: 16,
+    marginRight: 16,
   },
   removeButtonImage: {
     width: 12,
