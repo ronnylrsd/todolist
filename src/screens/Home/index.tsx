@@ -94,7 +94,7 @@ export function Home() {
             <Task
               key={item}
               name={item}
-              onConclued={() => handleConcluedTask(item)}
+              setCount={setConcludedTasksCount}
               onRemove={() => handleRemoveSelectedTask(item)}
             />
           )}

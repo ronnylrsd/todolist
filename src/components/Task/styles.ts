@@ -14,7 +14,7 @@ export const styles = StyleSheet.create({
     borderColor: "#333333", //GRAY_400
     borderRadius: 8,
   },
-  name: {
+  uncheckedName: {
     flex: 1,
     fontSize: 14,
     paddingVertical: 12,
@@ -23,15 +23,24 @@ export const styles = StyleSheet.create({
     lineHeight: 20,
     color: "#F2F2F2", //GRAY_100
   },
-  checkedButton: {
-    width: 24,
-    height: 24,
-    borderRadius: 50,
+  checkedName: {
+    flex: 1,
+    fontSize: 14,
+    paddingVertical: 12,
+    paddingRight: 48,
+    marginLeft: 16,
+    lineHeight: 20,
+    textDecorationLine: "line-through",
+    color: "#808080", //GRAY_300
+  },
+  button: {
     marginLeft: 12,
-    borderColor: '#4EA8DE', //BLUE
-    borderWidth: 2,
     alignItems: "center",
     justifyContent: "center",
+  },
+  buttonImage: {
+    width: 24,
+    height: 24,
   },
   removeButton: {
     width: 24,
