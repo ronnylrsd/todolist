@@ -14,11 +14,7 @@ import { styles } from "./styles";
 export function Home() {
   const [tasks, setTasks] = useState<string[]>([]);
   const [taskName, setTaskName] = useState<string>("");
-  const [tasksCount, setTasksCount] = useState(0);
-  const onPressAdd = () => setTasksCount(tasksCount + 1);
-  const onPressRemove = () => setTasksCount(tasksCount - 1);
   const [concludedTasksCount, setConcludedTasksCount] = useState(0);
-  const onPressConclued = () => setConcludedTasksCount(concludedTasksCount + 1);
 
   function handleAddNewTask() {
     if (tasks.includes(taskName)) {
@@ -29,16 +25,10 @@ export function Home() {
     }
     setTasks((prevState) => [...prevState, taskName]);
     setTaskName("");
-    onPressAdd();
   }
 
   function handleRemoveTask(name: string) {
     setTasks((prevState) => prevState.filter((task) => task !== name));
-    onPressRemove();
-  }
-
-  function handleConcluedTask(name: string) {
-    onPressConclued();
   }
 
   function handleRemoveSelectedTask(name: string) {
@@ -84,7 +74,7 @@ export function Home() {
         </View>
         <View style={styles.createdConcludedTasks}>
           <Text style={styles.createdTasksText}>Tarefas criadas</Text>
-          <Text style={styles.createdTasksNumber}>{tasksCount}</Text>
+          <Text style={styles.createdTasksNumber}>{tasks.length}</Text>
           <Text style={styles.concludedTasksText}>Tarefas concluídas</Text>
           <Text style={styles.concludedTasksNumber}>{concludedTasksCount}</Text>
         </View>
