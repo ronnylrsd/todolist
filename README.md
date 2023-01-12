@@ -12,14 +12,17 @@
 <br>
 
 ## 📱 Tela Principal
-<img src=""
- width=50%>
+<img src="https://user-images.githubusercontent.com/63603061/212102189-2d4aba5d-4977-4a4a-84ad-8c7e0462b6ec.png"
+ width=30%>
  ## 📱 Funcionalidades Parte 1
-<img src=""
- width=50%>
+<img src="https://user-images.githubusercontent.com/63603061/212103166-20e1872a-6ae1-4ba1-8606-c5b5aad65abd.png"
+ width=30%>
 ## 📱 Funcionalidades Parte 2
-<img src=""
- width=50%>
+<img src="https://user-images.githubusercontent.com/63603061/212103319-a561e2db-a0ea-4617-92a7-c3a8ca719f21.png"
+ width=30%>
+ ## 📱 Funcionalidades Parte 3
+<img src="https://user-images.githubusercontent.com/63603061/212103544-a67992cc-3e4c-4c35-b513-b2c532f545e1.png"
+ width=30%>
 
 ## 💻 Projeto
 
