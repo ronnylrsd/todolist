@@ -17,6 +17,8 @@ export function Home() {
   const [tasksCount, setTasksCount] = useState(0);
   const onPressAdd = () => setTasksCount(tasksCount + 1);
   const onPressRemove = () => setTasksCount(tasksCount - 1);
+  const [concludedTasksCount, setConcludedTasksCount] = useState(0);
+  const onPressConclued = () => setConcludedTasksCount(concludedTasksCount + 1);
 
   function handleAddNewTask() {
     if (tasks.includes(taskName)) {
@@ -34,7 +36,10 @@ export function Home() {
     setTasks((prevState) => prevState.filter((task) => task !== name));
     onPressRemove();
   }
-  function handleConcluedTask(name: string) {}
+
+  function handleConcluedTask(name: string) {
+    onPressConclued();
+  }
 
   function handleRemoveSelectedTask(name: string) {
     Alert.alert("Remover", `Remover a tarefa ${name}?`, [
@@ -81,7 +86,7 @@ export function Home() {
           <Text style={styles.createdTasksText}>Tarefas criadas</Text>
           <Text style={styles.createdTasksNumber}>{tasksCount}</Text>
           <Text style={styles.concludedTasksText}>Tarefas concluídas</Text>
-          <Text style={styles.concludedTasksNumber}>0</Text>
+          <Text style={styles.concludedTasksNumber}>{concludedTasksCount}</Text>
         </View>
         <FlatList
           data={tasks}
