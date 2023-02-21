@@ -1,6 +1,6 @@
 <h1 align="center">todolist</h1>
 
-<h3 align="center">Projeto Desafio 1</h3>
+<h3 align="center">Projeto 2</h3>
 <p align="center">
   <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -76,4 +76,4 @@ Ferramenta para celular tanto iOS quanto android:
 
 ---
 
-Projeto Desafio 1 desenvolvido a partir de aulas do Curso de React Native da RocketSeat
+Projeto 2 desenvolvido a partir de aulas do Curso de React Native da RocketSeat
